@@ -1,0 +1,4 @@
+import{g as i,f as l}from"./bundle-currency-Bv7IxZQo.js";document.addEventListener("DOMContentLoaded",async()=>{const n=document.querySelectorAll(".tab-btn"),o=document.querySelectorAll(".tab-content");n.forEach(e=>{e.addEventListener("click",t=>{t.preventDefault();const a=t.currentTarget,d=a.dataset.tab;n.forEach(c=>c.classList.remove("active")),o.forEach(c=>c.classList.remove("active")),a.classList.add("active"),document.getElementById("tab-"+d)?.classList.add("active")})});const s=document.getElementById("try-price-display"),r=document.querySelector(".price-value[data-usd-price]");if(s&&r)try{const e=parseFloat(r.dataset.usdPrice||"0"),t=await i(),a=l(e,t);s.innerHTML=`
+                    <span class="try-value">≈ ${a}</span>
+                    <span class="try-rate-info">(1$ = ${t.toFixed(2)}₺)</span>
+                `}catch{s.innerHTML='<span class="try-loading">Döviz kuru alınamadı</span>'}});
