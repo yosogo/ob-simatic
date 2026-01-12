@@ -1,0 +1,4 @@
+import{g as d,f as l}from"./bundle-currency-Bv7IxZQo.js";document.addEventListener("astro:page-load",async()=>{const r=document.querySelectorAll(".tab-btn"),o=document.querySelectorAll(".tab-content");r.forEach(a=>{a.addEventListener("click",t=>{t.preventDefault();const e=t.currentTarget,i=e.dataset.tab;r.forEach(c=>c.classList.remove("active")),o.forEach(c=>c.classList.remove("active")),e.classList.add("active"),document.getElementById("tab-"+i)?.classList.add("active")})});const s=document.getElementById("try-price-display"),n=document.querySelector(".price-value[data-usd-price]");if(s&&n)try{const a=parseFloat(n.dataset.usdPrice||"0"),t=await d(),e=l(a,t);s.innerHTML=`
+                    <span class="try-value">≈ ${e}</span>
+                    <span class="try-rate-info">(1$ = ${t.toFixed(2)}₺)</span>
+                `}catch{s.innerHTML='<span class="try-loading">Döviz kuru alınamadı</span>'}});
